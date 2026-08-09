@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&display=swap');
+
+@layer utilities {
+  .font-serif-latex {
+    font-family: "EB Garamond", Garamond, "Times New Roman", Georgia, serif;
+  }
+  .font-sans-clean {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom print styles for exact 1-page paper sheet output */
+@media print {
+  @page {
+    size: letter;
+    margin: 0.4in;
+  }
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 11pt;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .resume-paper {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: transparent !important;
+  }
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+}
